@@ -24,5 +24,4 @@ function parseBin(char) {
   return parseInt(char);
 }
 
-console.log(sum_binary("1111", "1111"));
-console.log(sum_digit("1", "0", 0));
+console.log(sum_binary("11101", "1011"));
