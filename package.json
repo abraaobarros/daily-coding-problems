@@ -1,0 +1,13 @@
+{
+  "name": "daily-coding-problems",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Abraao barros lacerda <abraaobarros3@gmail.com>",
+  "license": "MIT",
+  "workspaces": {
+    "packages":[
+      "problems/*"
+    ]
+  },
+  "private": "true"
+}
