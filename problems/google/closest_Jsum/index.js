@@ -9,6 +9,7 @@ function closest_3sum_BF(nums, target) {
           const newSum = nums[i] + nums[j] + nums[k] - target;
           if (newSum < minDistance) {
             closest = [nums[i], nums[j], nums[k]];
+            minDistance = newSum;
           }
         }
       }
@@ -17,4 +18,28 @@ function closest_3sum_BF(nums, target) {
   return closest;
 }
 
-console.log(closest_3sum_BF([2, 1, -5, 4], -1));
+function closest_3sum_O2(nums, target) {
+  let minDistance = Infinity;
+  let closest = null;
+  for (let i = 0; i <= nums.length - 2; i++) {
+    j = i + 1;
+    k = nums.length - 1;
+
+    while (k > j) {
+      const newSum = nums[i] + nums[j] + nums[k] - target;
+      if (newSum < minDistance) {
+        closest = [nums[i], nums[j], nums[k]];
+        minDistance = newSum;
+      }
+      if (newSum === 0) {
+        return [nums[i], nums[j], nums[k]];
+      }
+      nums[i] + nums[j] + nums[k] - target > 0 ? k-- : j++;
+    }
+  }
+  return closest;
+}
+
+console.log(closest_3sum_BF([2, 1, -5, 6, 7, 4], -1));
+
+console.log(closest_3sum_O2([2, 1, -5, 3, 6, 7, 4], -1));
