@@ -19,6 +19,7 @@ function closest_3sum_BF(nums, target) {
 }
 
 function closest_3sum_O2(nums, target) {
+  nums.sort()
   let minDistance = Infinity;
   let closest = null;
   for (let i = 0; i <= nums.length - 2; i++) {
@@ -26,7 +27,7 @@ function closest_3sum_O2(nums, target) {
     k = nums.length - 1;
 
     while (k > j) {
-      const newSum = nums[i] + nums[j] + nums[k] - target;
+      const newSum = Math.abs(nums[i] + nums[j] + nums[k] - target);
       if (newSum < minDistance) {
         closest = [nums[i], nums[j], nums[k]];
         minDistance = newSum;
