@@ -2,7 +2,7 @@
 This repository is used for my daily training to maintain me fresh on data structures and algorithms.
  
 ### Basic implementations
-A bunch of common algorithms used to solve medium/hard problems.
+A bunch of common basic algorithms used to solve medium/hard problems.
 
 * Stacks
     * push
