@@ -14,3 +14,12 @@ class BT(Object):
         self.left = left
         self.right  = right
 
+    def insert(self, val):
+        pass
+
+    def delete(self, val):
+        pass
+    
+    def contains(sel, val):
+        pass 
+
