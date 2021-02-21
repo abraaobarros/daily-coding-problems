@@ -15,7 +15,6 @@ function sum_binary(bin1, bin2) {
 function sum_digit(char1, char2, query) {
   const bin1 = parseBin(char1);
   const bin2 = parseBin(char2);
-
   return [(bin1 + bin2 + query) % 2, bin1 + bin2 + query >= 2 ? 1 : 0];
 }
 
