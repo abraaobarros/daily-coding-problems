@@ -1,7 +1,3 @@
-
-
-
-
 # levenstain distance between two words
 # if a[0]=b[0] lev(tail(a), tail(b))
 # 1+min()
@@ -26,7 +22,6 @@ def lev(a, b):
                 subCost = 0
             else:
                 subCost = 1
-
             matrix[i][j] = min(matrix[i-1][j]+1, matrix[i][j-1]+1, matrix[i-1][j-1]+subCost)
     return matrix[n-1][m-1]
 
