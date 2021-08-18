@@ -29,18 +29,27 @@ bfs(root, print)
 class DisjointSet_QuickUnion():
     def __init__(self, size):
         self.root = [x for x in range(size)]
+        self.rank = [1] * size
 
     def find(self, a):
-        while(x != self.root[x]):
-            x = self.root[x]
-        return x
+        if a == self.root[a]:
+            return a
+        self.root[a] = self.find(root[a])
+        return self.root[a]
 
     def union(self, a,b):
         rootX = self.find[a]
         rootY = self.find[b]
 
-        if rootX!=rootY:
-            self.root[rootY] = rootX
+        if rootX != rootY:
+            # optimization to balancing the hight
+            if self.rank[rootX] > self.rank[rootY]:
+                self.root[rootY] = rootX
+            elif self.rank[rootX] < self.rank[rootY]:
+                self.root[rootX] = rootY
+            else:
+                self.root[rootY] = rootX
+                self.rank[rootX] +=1
 
     def connected(self, x, y):
         return self.find(x) == self.find(y)
