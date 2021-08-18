@@ -18,7 +18,7 @@ class Trie():
             if(start[i] not in curr.children):
                 return []
             curr = curr.children[start[i]]
-        output = [] 
+        output = []
         _getListFromTrie(start, curr, output)
         return output
 
@@ -53,7 +53,10 @@ out =[]
 a = _buildTrie(inp)
 
 _getListFromTrie('', a, out)
+# O()
+print(a.autocomplete("Abr"))
 
-print(a.autocomplete("Ac"))
+
+23*20
 
 
