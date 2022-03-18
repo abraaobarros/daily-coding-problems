@@ -13,4 +13,14 @@
 - Tree transverse
 - Graph transverse
 
- 
+## How run the codes
+
+compile
+``` bash
+#any warn visible
+g++ -std=c++11 -Wall <code> -o <file>;
+```
+execute
+``` bash
+./<file>
+```
