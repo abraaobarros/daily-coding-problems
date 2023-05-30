@@ -34,8 +34,6 @@ def astar(graph, start, goal):
 
       
         closed_set.add(current)
-
-      
         for neighbor in graph[current]:
             if neighbor in closed_set:
                 continue
@@ -44,8 +42,6 @@ def astar(graph, start, goal):
                 parents[neighbor] = current
                 g_scores[neighbor] = tentative_g_score
                 f_scores[neighbor] = g_scores[neighbor] + manhattan_distance(neighbor, goal)
-
-              
                 if neighbor not in (node[1] for node in open_set):
                     heappush(open_set, (f_scores[neighbor], neighbor))
 
